@@ -1,0 +1,51 @@
+ <SwiperSlide key={index}>
+                    <form action="post" onSubmit={(e) => e.preventDefault()}>
+                    <div
+                      className="question-heading"
+                      style={{ textAlign: "center" }}
+                    >
+                      <h2
+                        dangerouslySetInnerHTML={{ __html: question.question }}
+                      />
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        margin: "10vh 10vh",
+                        flexDirection: "column",
+                        justifyContent: "flex-start",
+                        alignItems: "flex-start",
+                      }}
+                    >
+                      {array.map((asd) => {
+                        console.log(array)
+                        return (
+                          
+                          <label
+                          key={index+"a"}
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                              fontSize: "25px",
+                            }}
+                          >
+                            <input
+                              type="radio"
+                              value={asd}
+                              name={`question-${asd[0]}`}
+                              key={asd[0]}
+                              id={`radio-${asd}`}
+                              style={{
+                                marginRight: "5vh",
+                                height: "3vh",
+                                width: "20px",
+                              }}
+                            />
+                            {asd}
+                          </label>
+                         
+                        );
+                      })}
+                    </div>
+                       </form>
+                  </SwiperSlide>

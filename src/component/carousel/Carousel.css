@@ -1,0 +1,117 @@
+.MyInput {
+  display: none;
+}
+.MyLabel {
+  cursor: pointer;
+  font-size: 4vh;
+  
+  width: 70%;
+}
+
+.MyLabel:before {
+  width: 70%;
+  margin-right: 10px;
+  content: '';
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  background: rgb(201, 201, 202);
+  border-radius: 50%;
+  z-index: 2;
+  transition: box-shadow .4s ease,
+          background .3s ease;
+}
+
+input:checked + label:before {
+  box-shadow: inset 0px 3px 0 2px rgb(201, 201, 202);
+  background: rgb(230, 37, 37);
+}
+.question-heading{
+  padding: 0 8%;
+  font-size: 4vh;
+}
+.div-style{
+  width:70%;
+  margin-left:8%;
+
+}
+
+
+.submit-button {
+  margin-top: 3vh;
+  height: 50px;
+  width: 200px;
+  font-size: 20px;
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.submit-button:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.submit-button:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+
+
+
+
+@media (max-width: 1050px) {
+  .MyLabel {
+    font-size: 2.5vh;
+    width: 80%;
+  }
+
+  .question-heading {
+    font-size: 2.5vh;
+  }
+
+  .submit-button {
+    margin-top: 2vh;
+    width: 150px;
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .MyLabel {
+    font-size: 2vh;
+    width: 90%;
+  }
+
+  .question-heading {
+    font-size: 2vh;
+  }
+
+  .submit-button {
+    margin-top: 1vh;
+    width: 120px;
+    font-size: 14px;
+    padding: 0.4rem 0.8rem;
+  }
+  .div-style{
+    width:70%;
+    margin-left:15%;
+  }
+}
