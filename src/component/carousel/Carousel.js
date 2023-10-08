@@ -52,6 +52,7 @@ const Carousel = () => {
   };
   useEffect(() => {
     fetchData();
+    //eslint-disable-next-line
   }, []);
 
   // console.log("this is incorrect asnwers: ",array)
@@ -134,7 +135,7 @@ const Carousel = () => {
         clearTimeout(timeoutId);
         clearInterval(intervalId);
       };
-    }
+    }//eslint-disable-next-line
   }, [data]);
 
   if (!shuffledOptions) {
